@@ -1,103 +1,110 @@
-import Image from "next/image";
+import { Layout } from 'antd';
+import { Button, Card } from 'antd';
+import GallerySection from './components/GallerySection';
+
+const { Content } = Layout;
+
+const sections = [
+  {
+    title: "Purpose",
+    text: "To provide and maintain the highest standard of orthotic, prosthetic, and rehabilitation care, in a scientific and professional environment for all age groups.",
+    imgSrc: "https://tse2.mm.bing.net/th/id/OIP.b-q3vxUzBsxp41JhgSr9uQHaE8?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3",
+    alt: "Purpose image representing care and professionalism",
+  },
+  {
+    title: "Goal",
+    text: "To assure the best possible rehabilitation outcome for every individual referred to our center for orthotic, prosthetic, and rehabilitation services.",
+    imgSrc: "https://lsom.uthscsa.edu/rehab/wp-content/uploads/sites/139/2018/09/iStock-503663810.jpg",
+    alt: "Goal image depicting patient progress",
+  },
+  {
+    title: "Objectives",
+    textList: [
+      "Apply scientific and professional principles to care.",
+      "Collaborate with doctors, therapists, and healthcare specialists.",
+      "Utilize latest technologies and partnerships with leading manufacturers.",
+      "Serve children, adults, and seniors with personalized solutions.",
+    ],
+    imgSrc: "https://prognocis.com/wp-content/uploads/2022/01/young-medical-specialists-high-five-2048x1367.jpg",
+    alt: "Objectives image showing teamwork and care",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <Layout className="min-h-screen bg-gray-50">
+      <section className="flex flex-col min-h-svh -mt-12 md:flex-row md:items-center md:justify-center gap-8">
+        <div className="order-2 md:order-1 md:w-1/2">
+          <GallerySection />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <div className="order-1 md:order-2 flex flex-col items-center justify-center gap-4 md:w-1/2">
+          <h1 className="text-2xl md:text-5xl font-bold text-blue-400 text-center my-6 !mt-20">
+            Welcome to Atrafi Medical Center
+          </h1>
+          <p className="max-w-2xl text-center text-lg text-blue-950">
+            Atrafi is dedicated to providing and maintaining the highest quality of comprehensive orthotic and prosthetic (O&P) and rehabilitation care for our patients in a scientific and professional environment.
+          </p>
+          <div className="flex gap-4 justify-center my-4">
+            <Button type="primary" size="large" href="/services">
+              View Services
+            </Button>
+            <Button type="default" size="large" href="/contact">
+              Contact Us
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Purpose, Goal, Objectives Section */}
+
+      <section className="mt-16 px-5 py-15 space-y-16 bg-blue-50/90">
+        {sections.map(({ title, text, textList, imgSrc, alt }, idx) => (
+          <div
+            key={idx}
+            className={`flex flex-col md:flex-row items-center max-w-5xl mx-auto ${
+              idx % 2 === 1 ? "md:flex-row-reverse" : ""
+            } gap-6`}
+          >
+            <img
+              src={imgSrc}
+              alt={alt}
+              className="w-full md:w-1/2 h-64 object-cover rounded shadow-2xl p-2 bg-blue-50"
+            />
+            <div className="md:w-1/2 text-center md:text-left">
+              <h3 className="text-2xl font-semibold text-blue-500 mb-4">{title}</h3>
+              {text && <p className="text-blue-950 text-lg">{text}</p>}
+              {textList && (
+                <ol className="text-lg pl-4 list-decimal list-outside text-blue-950">
+                  {textList.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
+                </ol>
+              )}
+            </div>
+          </div>
+        ))}
+      </section>
+
+
+      {/* Services Highlights section */}
+      <section className="grid md:grid-cols-3 gap-6 my-15 px-5">
+        <Card title="For All Ages" className="shadow-lg bg-blue-50">
+          <p>
+            Serving children, adults, and seniors with tailored O&amp;P and rehab care, in partnership with doctors and therapists.
+          </p>
+        </Card>
+        <Card title="Comprehensive Care" className="shadow-lg">
+          <p>
+            Full range of orthotics &amp; prosthetics services, from consultation to treatment, using leading international brands.
+          </p>
+        </Card>
+        <Card title="Excellence &amp; Ethics" className="shadow-lg">
+          <p>
+            Scientific, professional standards and partnerships ensure the best rehabilitation outcomes for all patients.
+          </p>
+        </Card>
+      </section>
+
+    </Layout>
   );
 }
