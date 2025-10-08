@@ -94,21 +94,21 @@ const Header: React.FC = () => {
             </Button>
           </div>
         </Drawer>
-
-        <Button
-          className="md:!hidden"
-          type="text"
-          icon={<MenuOutlined style={{ fontSize: 24 }} />}
-          onClick={() => setDrawerVisible(true)}
-          aria-label="Open menu"
-        />
-        <Link href="/" className="flex items-center space-x-3 flex-shrink-0" aria-label="Homepage">
-          <img src="/logo.png" alt="Atrafi logo" className="h-12 w-auto" />
-          <Title level={4} className="m-0 text-primary cursor-pointer whitespace-nowrap">
-            Atrafi Medical Center
-          </Title>
-        </Link>
-
+        <div className="flex items-center">
+          <Button
+            className="md:!hidden"
+            type="text"
+            icon={<MenuOutlined style={{ fontSize: 24 }} />}
+            onClick={() => setDrawerVisible(true)}
+            aria-label="Open menu"
+          />
+          <Link href="/" className="flex items-center space-x-3 flex-shrink-0" aria-label="Homepage">
+            <img src="/logo.png" alt="Atrafi logo" className="h-12 w-auto" />
+            <Title level={4} className="m-0 text-primary cursor-pointer whitespace-nowrap">
+              Atrafi Medical Center
+            </Title>
+          </Link>
+        </div>
         <nav className="hidden md:flex flex-1 justify-center items-center">
           <Menu
             mode="horizontal"
