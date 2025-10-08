@@ -6,10 +6,12 @@ import { useWishlistCart } from "../context/WishlistCartContext";
 import { useRouter, useSearchParams } from "next/navigation";
 import { exampleProducts } from "./productsDummyData";
 import Link from "next/link";
+import { FaFilter } from "react-icons/fa";
 
 const { Search } = Input;
 
 const filterTypes = [
+    { label: "All", value: "" },
     { label: "Orthotic", value: "Orthotic" },
     { label: "Prosthetic", value: "Prosthetic" },
 ];
@@ -34,17 +36,25 @@ export default function ProductsPage() {
 
   return (
     <div className="p-6 w-full md:px-20 bg-blue-50/50 mx-auto">
-      <h1 className="text-3xl md:hidden text-blue-400 font-bold text-start mb-6">Products</h1>
-      <span className="flex items-center gap-2 pb-5 font-semibold text-blue-400">
-        <FilterOutlined />
-        Filters:
-        <Space>
-            <Checkbox.Group
-                options={filterTypes}
-                value={selectedTypes}
-                onChange={(vals) => setSelectedTypes(vals as string[])}
-            />
-        </Space>
+      <span className="flex items-center justify-between gap-2 pb-5 font-semibold text-blue-400">
+        <h1 className="text-xl text-blue-400 font-bold">Products</h1>
+        <div>
+            <FaFilter className="text-blue-400 mb-1 mx-1 inline" />
+            <span className="mr-1">Filters:</span>
+            <Space>
+                <Select
+                    value={selectedTypes}
+                    onChange={(vals) => setSelectedTypes(vals as string[])}
+                    style={{ minWidth: 100 }}
+                >
+                    {filterTypes.map((ft) => (
+                        <Select.Option value={ft.value} key={ft.value}>
+                            {ft.label}
+                        </Select.Option>
+                    ))}
+                </Select>
+            </Space>
+        </div>
       </span>
       <div className="grid gap-6 grid-cols-1 md:grid-cols-3">
         {filteredProducts.length === 0 && (

@@ -8,33 +8,33 @@ export default function Footer() {
         <div>
           <h3 className="text-xl font-semibold mb-4 text-blue-400">Contact Us</h3>
           <p>
-            Call Mobile: <a href="tel:0557733980" className="underline hover:!text-blue-300">0557733980</a>
+            Mobile: <a href="tel:0557733980" className="underline hover:!text-blue-300">0557733980</a>
           </p>
-          <p className="mt-2 max-w-xs">
+          <p className="mt-2">
+            Email: <a href="mailto:atrafi@atrafi.net" className="underline hover:!text-blue-300">
+              atrafi@atrafi.net
+            </a>
+          </p>
+          <p className="mt-2 max-w-xs text-blue-900">
             Please contact us directly with any questions, comments, or scheduling inquiries you may have.
           </p>
         </div>
         
         <div>
-          <h3 className="text-xl font-semibold mb-4 text-blue-400">Atrafi</h3>
+          <h3 className="text-xl font-semibold mb-4 text-blue-400">Address</h3>
           <address className="not-italic">
+            Atrafi<br />
             23523, Hira Street<br />
             Jeddah, Saudi Arabia
           </address>
-          <p className="mt-2">
-            <a href="mailto:atrafi@atrafi.net" className="underline hover:!text-blue-300">
-              atrafi@atrafi.net
-            </a>
-          </p>
+          
         </div>
 
         <div>
-          <h3 className="text-xl font-semibold mb-4 text-blue-400">Hours</h3>
+          <h3 className="text-xl font-semibold mb-4 text-blue-400">Open Hours</h3>
           <p>Sunday - Thursday: 8AM – 5PM</p>
           <p>Friday - Saturday: Off</p>
-          
-          <h3 className="text-xl font-semibold mb-4 text-blue-400">Emergency Service</h3>
-          <p>24/7</p>
+          <p>Emergency Service - 24/7</p>
         </div>
         <div>
           <MapEmbed />
