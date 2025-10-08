@@ -71,7 +71,7 @@ export default function Home() {
               className="w-full md:w-1/2 h-64 object-cover rounded shadow-2xl p-2 bg-blue-50"
             />
             <div className="md:w-1/2 text-center md:text-left">
-              <h3 className="text-2xl font-semibold text-blue-500 mb-4">{title}</h3>
+              <h3 className="text-2xl font-semibold text-blue-400 mb-4">{title}</h3>
               {text && <p className="text-blue-950 text-lg">{text}</p>}
               {textList && (
                 <ol className="text-lg pl-4 list-decimal list-outside text-blue-950">

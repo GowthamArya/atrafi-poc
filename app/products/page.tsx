@@ -82,14 +82,14 @@ export default function ProductsPage() {
                 className="shadow-xl !p-0"
                 >
                 <img alt={product.name} src={product.image} className="object-cover p-0 m-0 overflow-hidden h-62 w-full rounded" />
-                <h3 className="text-blue-800 font-semibold text-lg mt-3 mb-4 text-center">{product.name}</h3>
+                <h3 className="text-blue-400 font-semibold text-lg mt-3 mb-4 text-center">{product.name}</h3>
                 <div>
                     <div className="mb-2">
-                        <span className="text-gray-600 font-semibold mr-1">Type:</span>
+                        <span className="text-gray-600 font-semibold mr-1"><strong>Type: </strong></span>
                         {product.type}
                     </div>
                     <div className="mb-2">
-                        <span className="text-gray-600 font-semibold mr-1">Sizes:</span>
+                        <span className="text-gray-600 font-semibold mr-1"><strong>Sizes:</strong></span>
                         <Select
                             value={sizeSelected}
                             onChange={(val) => handleSizeSelect(product.id, val)}
@@ -103,7 +103,7 @@ export default function ProductsPage() {
                         </Select>
                     </div>
                     <div>
-                    <span className="text-gray-600 font-semibold mr-1">Price:</span>
+                    <span className="text-gray-600 font-semibold mr-1"><strong>Price:</strong></span>
                     {product.price}
                     </div>
                 </div>

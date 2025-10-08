@@ -41,7 +41,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="mt-10 text-center text-blue-300 text-sm">
+      <div className="mt-10 text-center text-blue-400 text-sm">
         &copy; {new Date().getFullYear()} Atrafi Medical Center. All rights reserved.
       </div>
     </footer>

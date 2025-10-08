@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import {
   MenuOutlined,
   HomeOutlined,
@@ -29,6 +29,7 @@ const NAV_ITEMS = [
 const Header: React.FC = () => {
   const path = usePathname() || "/";
   const router = useRouter();
+  const searchParams = useSearchParams();
   const { wishlist, cart } = useWishlistCart();
   const [drawerVisible, setDrawerVisible] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -45,8 +46,10 @@ const Header: React.FC = () => {
     setDrawerVisible(false);
     router.push(`/products?search=${encodeURIComponent(value)}`);
   };
+
   useEffect(()=>{
-    router.push(`/products?search=${encodeURIComponent(searchValue)}`)
+    const param = searchParams.get("search") ?? "";
+    setSearchValue(param);
   },[searchValue])
 
   return (
@@ -96,7 +99,7 @@ const Header: React.FC = () => {
         <div className="flex items-center gap-2 flex-shrink-0">
           {/* Menu Icon (visible only on mobile) */}
           <Button
-            className="md:hidden"
+            className="md:!hidden"
             type="text"
             icon={<MenuOutlined style={{ fontSize: 24 }} />}
             onClick={() => setDrawerVisible(true)}

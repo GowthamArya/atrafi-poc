@@ -14,7 +14,7 @@ export default function CartPage() {
 
   return (
     <div className="p-6 max-w-4xl min-h-screen mx-auto">
-      <h1 className="text-2xl font-bold text-blue-600 mb-6 text-center">Shopping Cart</h1>
+      <h1 className="text-2xl font-bold text-blue-400 mb-6 text-center">Shopping Cart</h1>
       {cartItems.length === 0 ? (
         <Empty description="Your cart is empty." />
       ) : (
@@ -81,7 +81,7 @@ export default function CartPage() {
               );
             })}
           </div>
-          <div className="text-right mt-8 text-lg font-bold text-blue-700">
+          <div className="text-right mt-8 text-lg font-bold text-blue-400">
             Total: ₹{total}
           </div>
           <div className="flex justify-end mt-4">
