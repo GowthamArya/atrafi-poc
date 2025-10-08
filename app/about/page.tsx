@@ -42,7 +42,7 @@ export default function AboutUs() {
       <section className="flex flex-col md:flex-row items-center gap-8 mb-16">
         <div className="md:w-1/2">
           <Title level={4} className="!text-blue-900 mb-3 font-semibold">
-            Mohamad Khalid A Batterjee – Manager
+            Mohamad Khalid A Batterjee (Manager) 
           </Title>
           <Paragraph className="text-gray-700 text-lg leading-relaxed">
             Managing Director and Co-founder<br />
