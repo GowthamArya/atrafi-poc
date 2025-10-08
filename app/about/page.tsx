@@ -19,11 +19,7 @@ export default function AboutUs() {
         more energetic, more active, and ready to conquer life with confidence and pride.
       </Paragraph>
 
-      <Paragraph className="mb-16 text-gray-800 text-lg leading-relaxed text-justify">
-                في مركز عطرفي الطبي، نؤمن أن كل تحدٍ يمكن أن يتحول إلى قوة.
-        أطرافنا الصناعية وأجهزتنا التقويمية تمنح ذوي الهمم طاقة جديدة ليعيشوا بقوة، ويخطوا بثقة، ويشعروا بالحياة أكثر من أي وقت مضى.
-        أنتم لستم محدودين، أنتم أقوياء، مفعمون بالطاقة، ونشطون أكثر من الجميع أنتم قادرون على كسر كل القيود والارتقاء بثقة وفخر
-      </Paragraph>
+      
 
       <hr />
 
