@@ -19,7 +19,7 @@ export default function WishlistPage() {
   };
 
   return (
-    <div className="p-6 max-w-4xl mx-auto">
+    <div className="p-6 max-w-4xl min-h-screen mx-auto">
       <h1 className="text-2xl font-bold text-blue-600 mb-6 text-center">Wishlist</h1>
       {wishlistItems.length === 0 ? (
         <Empty description="Your wishlist is empty." />

@@ -13,7 +13,7 @@ export default function CartPage() {
   const total = cartItems.reduce((acc, p) => acc + Number((p.price || "0").replace(/\D/g, "")), 0);
 
   return (
-    <div className="p-6 max-w-4xl mx-auto">
+    <div className="p-6 max-w-4xl min-h-screen mx-auto">
       <h1 className="text-2xl font-bold text-blue-600 mb-6 text-center">Shopping Cart</h1>
       {cartItems.length === 0 ? (
         <Empty description="Your cart is empty." />
