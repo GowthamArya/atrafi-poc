@@ -48,14 +48,14 @@ const Header: React.FC = () => {
       )}
 
       <header className="flex items-center justify-between px-6 py-3 bg-white shadow-sm w-full">
-   <Drawer
+       <Drawer
           title={
             <Link href="/" onClick={() => setDrawerVisible(false)} className="flex items-center space-x-3" aria-label="Homepage">
               <img src="/logo.png" alt="Atrafi logo" className="h-10 w-auto" />
               <Title level={4} className="m-0 text-primary cursor-pointer whitespace-nowrap">Atrafi</Title>
             </Link>
           }
-          placement="right"
+          placement="left"
           onClose={() => setDrawerVisible(false)}
           open={drawerVisible}
           width={260}
