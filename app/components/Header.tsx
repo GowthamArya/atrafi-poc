@@ -81,16 +81,16 @@ const Header: React.FC = () => {
               ),
             }))}
           />
-          <div className="flex items-center justify-around mt-6 mx-6">
+          <div className="flex flex-col items-center justify-around mt-6 mx-6">
             <Button type="text" aria-label="Go to Wishlist" onClick={() => goTo("/wishlist")}>
               <Badge count={wishlist.length} size="small" offset={[0, 5]}>
                 <HeartOutlined style={{ fontSize: 20, color: "#1890ff" }} />
-              </Badge>
+              </Badge>Go to Wishlist
             </Button>
             <Button type="text" aria-label="Go to Cart" onClick={() => goTo("/cart")}>
               <Badge count={cart.length} size="small" offset={[0, 5]}>
                 <ShoppingCartOutlined style={{ fontSize: 20, color: "#1890ff" }} />
-              </Badge>
+              </Badge>Go to Cart
             </Button>
           </div>
         </Drawer>
