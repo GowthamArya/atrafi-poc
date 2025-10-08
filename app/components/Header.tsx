@@ -94,6 +94,14 @@ const Header: React.FC = () => {
             </Button>
           </div>
         </Drawer>
+
+        <Button
+          className="md:!hidden"
+          type="text"
+          icon={<MenuOutlined style={{ fontSize: 24 }} />}
+          onClick={() => setDrawerVisible(true)}
+          aria-label="Open menu"
+        />
         <Link href="/" className="flex items-center space-x-3 flex-shrink-0" aria-label="Homepage">
           <img src="/logo.png" alt="Atrafi logo" className="h-12 w-auto" />
           <Title level={4} className="m-0 text-primary cursor-pointer whitespace-nowrap">
@@ -130,14 +138,6 @@ const Header: React.FC = () => {
             </Badge>
           </Button>
         </div>
-
-        <Button
-          className="md:!hidden"
-          type="text"
-          icon={<MenuOutlined style={{ fontSize: 24 }} />}
-          onClick={() => setDrawerVisible(true)}
-          aria-label="Open menu"
-        />
       </header>
     </>
   );
