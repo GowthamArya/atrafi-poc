@@ -75,8 +75,7 @@ export default function AboutUs() {
           <Paragraph className="text-gray-700 text-lg leading-relaxed">
             With over 25 years of experience managing private healthcare services in the GCC,
             Dr. Yasser has collaborated with international institutes and experts from Germany,
-            UK, France, Austria, Switzerland, and the USA. His leadership has been instrumental in
-            elevating Atrafi's performance through technical, scientific, education, and training initiatives.
+            UK, France, Austria, Switzerland, and the USA.
           </Paragraph>
           <Paragraph className="text-gray-700 text-lg leading-relaxed">
             Dr. Yasser is an active member of several professional organizations including the
