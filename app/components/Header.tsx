@@ -48,6 +48,52 @@ const Header: React.FC = () => {
       )}
 
       <header className="flex items-center justify-between px-6 py-3 bg-white shadow-sm w-full">
+   <Drawer
+          title={
+            <Link href="/" onClick={() => setDrawerVisible(false)} className="flex items-center space-x-3" aria-label="Homepage">
+              <img src="/logo.png" alt="Atrafi logo" className="h-10 w-auto" />
+              <Title level={4} className="m-0 text-primary cursor-pointer whitespace-nowrap">Atrafi</Title>
+            </Link>
+          }
+          placement="right"
+          onClose={() => setDrawerVisible(false)}
+          open={drawerVisible}
+          width={260}
+        >
+          <Menu
+            mode="inline"
+            selectedKeys={[path]}
+            onClick={() => setDrawerVisible(false)}
+            className="bg-transparent border-none"
+            items={NAV_ITEMS.map(({ key, label, icon }) => ({
+              key,
+              label: (
+                <span
+                  role="button"
+                  tabIndex={0}
+                  onClick={() => goTo(key)}
+                  onKeyUp ={(e) => { if (e.key === 'Enter') goTo(key); }}
+                  className="flex items-center gap-2 py-2 px-3 whitespace-nowrap"
+                >
+                  {icon}
+                  <span>{label}</span>
+                </span>
+              ),
+            }))}
+          />
+          <div className="flex items-center justify-around mt-6 mx-6">
+            <Button type="text" aria-label="Go to Wishlist" onClick={() => goTo("/wishlist")}>
+              <Badge count={wishlist.length} size="small" offset={[0, 5]}>
+                <HeartOutlined style={{ fontSize: 20, color: "#1890ff" }} />
+              </Badge>
+            </Button>
+            <Button type="text" aria-label="Go to Cart" onClick={() => goTo("/cart")}>
+              <Badge count={cart.length} size="small" offset={[0, 5]}>
+                <ShoppingCartOutlined style={{ fontSize: 20, color: "#1890ff" }} />
+              </Badge>
+            </Button>
+          </div>
+        </Drawer>
         <Link href="/" className="flex items-center space-x-3 flex-shrink-0" aria-label="Homepage">
           <img src="/logo.png" alt="Atrafi logo" className="h-12 w-auto" />
           <Title level={4} className="m-0 text-primary cursor-pointer whitespace-nowrap">
@@ -93,53 +139,6 @@ const Header: React.FC = () => {
           aria-label="Open menu"
         />
       </header>
-
-      <Drawer
-        title={
-          <Link href="/" onClick={() => setDrawerVisible(false)} className="flex items-center space-x-3" aria-label="Homepage">
-            <img src="/logo.png" alt="Atrafi logo" className="h-10 w-auto" />
-            <Title level={4} className="m-0 text-primary cursor-pointer whitespace-nowrap">Atrafi</Title>
-          </Link>
-        }
-        placement="right"
-        onClose={() => setDrawerVisible(false)}
-        open={drawerVisible}
-        width={260}
-      >
-        <Menu
-          mode="inline"
-          selectedKeys={[path]}
-          onClick={() => setDrawerVisible(false)}
-          className="bg-transparent border-none"
-          items={NAV_ITEMS.map(({ key, label, icon }) => ({
-            key,
-            label: (
-              <span
-                role="button"
-                tabIndex={0}
-                onClick={() => goTo(key)}
-                onKeyUp ={(e) => { if (e.key === 'Enter') goTo(key); }}
-                className="flex items-center gap-2 py-2 px-3 whitespace-nowrap"
-              >
-                {icon}
-                <span>{label}</span>
-              </span>
-            ),
-          }))}
-        />
-        <div className="flex items-center justify-around mt-6 mx-6">
-          <Button type="text" aria-label="Go to Wishlist" onClick={() => goTo("/wishlist")}>
-            <Badge count={wishlist.length} size="small" offset={[0, 5]}>
-              <HeartOutlined style={{ fontSize: 20, color: "#1890ff" }} />
-            </Badge>
-          </Button>
-          <Button type="text" aria-label="Go to Cart" onClick={() => goTo("/cart")}>
-            <Badge count={cart.length} size="small" offset={[0, 5]}>
-              <ShoppingCartOutlined style={{ fontSize: 20, color: "#1890ff" }} />
-            </Badge>
-          </Button>
-        </div>
-      </Drawer>
     </>
   );
 };
