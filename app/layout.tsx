@@ -8,6 +8,7 @@ import { ConfigProvider, theme } from 'antd';
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { WishlistCartProvider } from "./context/WishlistCartContext";
+import { GoogleTranslateProvider } from "react-custom-google-translate";
 
 export const dynamic = "force-dynamic";
 
@@ -45,9 +46,11 @@ export default function RootLayout({
                 },
               }}
             >
-              <Header />
-              {children}
-              <Footer />
+              <GoogleTranslateProvider pageLanguage="en">
+                <Header />
+                {children}
+                <Footer />
+              </GoogleTranslateProvider>
             </ConfigProvider>
           </AntdRegistry>
         </WishlistCartProvider>
