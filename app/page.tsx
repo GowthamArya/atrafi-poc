@@ -74,11 +74,11 @@ export default function Home() {
               <h3 className="text-2xl font-semibold text-blue-400 mb-4">{title}</h3>
               {text && <p className="text-blue-950 text-lg">{text}</p>}
               {textList && (
-                <ol className="text-lg pl-4 list-decimal list-outside text-blue-950">
+                <ul className="text-lg pl-4 list-decimal list-outside text-blue-950">
                   {textList.map((item, i) => (
                     <li key={i}>{item}</li>
                   ))}
-                </ol>
+                </ul>
               )}
             </div>
           </div>
