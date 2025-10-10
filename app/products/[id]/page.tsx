@@ -11,7 +11,7 @@ export default function ProductDetailsPage({ params }: PageProps) {
   const router = useRouter();
   const { id } = params;
 
-  var product = exampleProducts.find(p => p.id === Number(id));
+  let product = exampleProducts.find(p => p.id === Number(id));
   if(product){
     if(product.type == "Orthotic"){
       product.description = "Orthotic devices are designed to support, align, prevent, or correct deformities or to improve the function of movable parts of the body. Our orthotic products provide customized support to enhance mobility and comfort.";
