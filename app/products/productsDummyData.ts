@@ -4,6 +4,7 @@ export interface Product {
   type: "Orthotic" | "Prosthetic";
   sizes: string[];
   price: string;
+  description?: string;
   image: string;
 }
 

@@ -14,6 +14,7 @@ import {
 } from "@ant-design/icons";
 import { Badge, Button, Drawer, Menu, Typography, Spin, Input } from "antd";
 import { useWishlistCart } from "../context/WishlistCartContext";
+import GoogleTranslateWidget from "../GoogleTranslateWidget";
 
 const { Search } = Input;
 const { Title } = Typography;
@@ -47,10 +48,10 @@ const Header: React.FC = () => {
     router.push(`/products?search=${encodeURIComponent(value)}`);
   };
 
-  useEffect(()=>{
+  useEffect(() => {
     const param = searchParams.get("search") ?? "";
     setSearchValue(param);
-  },[searchValue])
+  }, [searchParams]);
 
   return (
     <>
@@ -158,6 +159,7 @@ const Header: React.FC = () => {
               <ShoppingCartOutlined style={{ fontSize: 20, color: "#1890ff" }} />
             </Badge>
           </Button>
+          {/* <GoogleTranslateWidget /> */}
         </div>
       </header>
     </>

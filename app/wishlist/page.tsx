@@ -85,7 +85,7 @@ export default function WishlistPage() {
                   </div>
                   <div>
                     <span className="text-gray-600 font-semibold mr-1">Price:</span>
-                    {product.price}
+                      {product.price}ر.س 
                   </div>
                 </div>
               </Card>

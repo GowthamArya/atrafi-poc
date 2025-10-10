@@ -82,7 +82,7 @@ export default function CartPage() {
             })}
           </div>
           <div className="text-right mt-8 text-lg font-bold text-blue-400">
-            Total: ₹{total}
+            Total: {total}ر.س 
           </div>
           <div className="flex justify-end mt-4">
             <Button type="primary" size="large" disabled>

@@ -11,7 +11,7 @@ import { FaFilter } from "react-icons/fa";
 const { Search } = Input;
 
 const filterTypes = [
-    { label: "All", value: "" },
+    { label: "All", value: "all" },
     { label: "Orthotic", value: "Orthotic" },
     { label: "Prosthetic", value: "Prosthetic" },
 ];
@@ -21,11 +21,11 @@ export default function ProductsPage() {
     const searchQuery = searchParams.get("search")?.toLowerCase() ?? "";
     const router = useRouter();
     const { wishlist, cart, addToWishlist, addToCart } = useWishlistCart();
-    const [selectedTypes, setSelectedTypes] = useState<string[]>([]);
+    const [selectedTypes, setSelectedTypes] = useState<string[]>(["all"]);
     const [selectedSizes, setSelectedSizes] = useState<Record<number, string>>({});
 
     const filteredProducts = exampleProducts.filter((product) => {
-        const matchesType = selectedTypes.length === 0 || selectedTypes.includes(product.type);
+        const matchesType = selectedTypes.length === 0 || selectedTypes.includes(product.type) || selectedTypes.includes("all");
         const searchMatch = product.name.toLowerCase().includes(searchQuery)
         return matchesType && searchMatch;
     });
@@ -69,6 +69,7 @@ export default function ProductsPage() {
             const inCart = cart.includes(product.id);
 
             return (
+                <Link key={product.id} href={`/products/${product.id}`}>
                 <Card
                 key={product.id}
                 actions={[
@@ -118,6 +119,7 @@ export default function ProductsPage() {
                     </div>
                 </div>
                 </Card>
+                </Link>
             );
         })}
       </div>
