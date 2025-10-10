@@ -14,7 +14,6 @@ import {
 } from "@ant-design/icons";
 import { Badge, Button, Drawer, Menu, Typography, Spin, Input } from "antd";
 import { useWishlistCart } from "../context/WishlistCartContext";
-import GoogleTranslateWidget from "../GoogleTranslateWidget";
 
 const { Search } = Input;
 const { Title } = Typography;
