@@ -3,12 +3,30 @@ import React, { useEffect, useState } from "react";
 import { Button } from "antd";
 import { GlobalOutlined } from "@ant-design/icons";
 
+interface GoogleTranslate {
+  translate: {
+    TranslateElement: {
+      new (options: {
+        pageLanguage: string;
+        layout: number;
+        autoDisplay: boolean;
+        includedLanguages: string;
+      }, elementId: string): any; // or more specific type
+      InlineLayout: {
+        VERTICAL: number;
+        // other layouts if needed
+      };
+    };
+  };
+}
+
 declare global {
   interface Window {
-    google?: any;
     googleTranslateElementInit?: () => void;
+    google?: GoogleTranslate;
   }
 }
+
 
 export default function GoogleTranslateFloatButton() {
   const [showWidget, setShowWidget] = useState(false);
@@ -25,7 +43,7 @@ export default function GoogleTranslateFloatButton() {
     }
     if (typeof window !== "undefined") {
     window.googleTranslateElementInit = () => {
-        if (!window.google || !window.google.translate) return;
+        if (!window?.google || !window.google.translate) return;
         new window.google.translate.TranslateElement(
           {
             pageLanguage: "en",
