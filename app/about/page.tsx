@@ -20,16 +20,14 @@ export default function AboutUs() {
         more energetic, more active, and ready to conquer life with confidence and pride.
       </Paragraph>
 
-      
-
       <Divider className="my-16" />
       <section className="flex flex-col md:flex-row items-center gap-8">
         <div className="md:w-1/2">
           <Title level={4} className="!text-blue-900 mb-3 font-semibold">
-            Prof. Khalid Batterjee, MD - 
+            Prof. Khalid Batterjee, MD (
             <span className="text-blue-400 px-1">
               Founder
-            </span>
+            </span>)
           </Title>
           <Paragraph className="text-gray-700 text-lg leading-relaxed">
             Senior Consultant Orthopedic Spine and Trauma Surgeon<br />
@@ -51,13 +49,6 @@ export default function AboutUs() {
           loading="lazy"
         />
       </section>
-      
-
-
-
-
-
-
 
       <Divider className="my-16" />
 
@@ -103,21 +94,6 @@ export default function AboutUs() {
             Mr. Badran specializes in plastic jackets, including Milwaukee corset, shenue jackets, Boston corset, and unique baby TEV splints and various AFO splints. Atrafi is proud to have Mr. Badran continue leading its technical services since its establishment in 2017.
           </Paragraph>
       </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
       <Divider className="my-16" />
 
