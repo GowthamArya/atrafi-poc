@@ -20,6 +20,7 @@ const sections = [
   },
   {
     title: "Objectives",
+    textList: [
       "Apply scientific and professional principles to care.",
       "Collaborate with doctors, therapists, and healthcare specialists.",
       "Utilize latest technologies and partnerships with leading manufacturers.",
