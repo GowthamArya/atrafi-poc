@@ -23,19 +23,20 @@ export default function GoogleTranslateFloatButton() {
     if (!document.getElementById("googleTranslateScript")) {
         document.body.appendChild(addScript);
     }
-
+    if (typeof window !== "undefined") {
     window.googleTranslateElementInit = () => {
-      new window.google.translate.TranslateElement(
-        {
-          pageLanguage: "en",
-          layout: window.google?.translate.TranslateElement.InlineLayout.VERTICAL,
-          autoDisplay: false,
-          includedLanguages:"en,hi,ar"
-        },
-        "google_translate_element"
-      );
-    };
-
+        if (!window.google || !window.google.translate) return;
+        new window.google.translate.TranslateElement(
+          {
+            pageLanguage: "en",
+            layout: window.google?.translate.TranslateElement.InlineLayout.VERTICAL,
+            autoDisplay: false,
+            includedLanguages:"en,hi,ar"
+          },
+          "google_translate_element"
+        );
+      };
+    }
     return () => {
       // Optionally cleanup (comment out to keep alive)
       document.body.removeChild(addScript);
