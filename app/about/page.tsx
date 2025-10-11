@@ -27,7 +27,7 @@ export default function AboutUs() {
           <Title level={4} className="!text-blue-900 mb-3 font-semibold">
             Prof. Khalid Batterjee, MD
             <span className="text-blue-400 px-1">
-              Founder
+              Owner
             </span>
           </Title>
           <Paragraph className="text-gray-700 text-lg leading-relaxed">

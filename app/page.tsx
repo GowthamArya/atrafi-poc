@@ -21,8 +21,6 @@ const sections = [
   {
     title: "Objectives",
     textList: [
-      "Apply scientific and professional principles to care.",
-      "Collaborate with doctors, therapists, and healthcare specialists.",
       "Utilize latest technologies and partnerships with leading manufacturers.",
       "Serve children, adults, and seniors with personalized solutions.",
     ],
@@ -71,11 +69,11 @@ export default function Home() {
               alt={alt}
               className="w-full md:w-1/2 h-64 object-cover rounded shadow-2xl p-2 bg-blue-50"
             />
-            <div className="md:w-1/2 text-center md:text-left">
+            <div className="md:w-1/2 text-start md:text-left">
               <h3 className="text-2xl font-semibold text-blue-400 mb-4">{title}</h3>
               {text && <p className="text-blue-950 text-lg">{text}</p>}
               {textList && (
-                <ul className="text-lg pl-4 list-decimal list-outside text-blue-950">
+                <ul className="text-lg pl-4 list-disc list-outside text-blue-950">
                   {textList.map((item, i) => (
                     <li key={i}>{item}</li>
                   ))}
