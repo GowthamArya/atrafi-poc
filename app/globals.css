@@ -73,7 +73,3 @@ body > .skiptranslate, .goog-logo-link, .gskiptranslate, .goog-te-gadget span, .
   background-color: skyblue;
   outline: none !important;
 }
-
-.goog-te-combo:first-of-type {
-  display: none !important;
-}
