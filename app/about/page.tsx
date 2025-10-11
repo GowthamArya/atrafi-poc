@@ -25,10 +25,10 @@ export default function AboutUs() {
       <section className="flex flex-col md:flex-row items-center gap-8">
         <div className="md:w-1/2">
           <Title level={4} className="!text-blue-900 mb-3 font-semibold">
-            Prof. Khalid Batterjee, MD (
+            Prof. Khalid Batterjee, MD
             <span className="text-blue-400 px-1">
               Founder
-            </span>)
+            </span>
           </Title>
           <Paragraph className="text-gray-700 text-lg leading-relaxed">
             Senior Consultant Orthopedic Spine and Trauma Surgeon<br />
