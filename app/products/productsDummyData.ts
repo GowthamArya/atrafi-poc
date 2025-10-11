@@ -11,7 +11,7 @@ export interface Product {
 export const exampleProducts: Product[] = [
   {
     id: 1,
-    name: "Knee Orthosis",
+    name: "Bil KAFO Splint orthoplast",
     type: "Orthotic",
     sizes: ["S", "M", "L", "XL"],
     price: "ر.س 100",  // Approximate conversion from ₹2000

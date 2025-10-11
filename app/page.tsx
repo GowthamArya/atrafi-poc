@@ -1,6 +1,7 @@
 import { Layout } from 'antd';
 import { Button, Card } from 'antd';
 import GallerySection from './components/GallerySection';
+import { Expertise } from './components/Expertise';
 
 const { Content } = Layout;
 
@@ -33,8 +34,8 @@ const sections = [
 export default function Home() {
   return (
     <Layout className="min-h-screen bg-gray-50">
-      <section className="flex flex-col min-h-svh -mt-12 md:flex-row md:items-center md:justify-center gap-8">
-        <div className="order-2 md:order-1 md:w-1/2">
+      <section className="flex flex-col min-h-svh -my-12 md:flex-row md:items-center md:justify-center gap-8">
+        <div className="order-2 md:order-1 md:w-1/2 pt-5">
           <GallerySection />
         </div>
         <div className="order-1 md:order-2 flex flex-col items-center justify-center gap-4 md:w-1/2">
@@ -104,7 +105,7 @@ export default function Home() {
           </p>
         </Card>
       </section>
-
+      <Expertise />
     </Layout>
   );
 }

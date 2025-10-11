@@ -2,6 +2,7 @@
 
 import React from "react";
 import { Typography, Divider } from "antd";
+import { Expertise } from "../components/Expertise";
 
 const { Title, Paragraph } = Typography;
 
@@ -123,6 +124,8 @@ export default function AboutUs() {
           </Paragraph>
         </div>
       </section>
+      <Divider className="my-16" />
+      <Expertise />
     </div>
   );
 }

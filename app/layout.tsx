@@ -38,7 +38,7 @@ export default function RootLayout({
           <AntdRegistry>
             <ConfigProvider
               theme={{
-                algorithm: theme.compactAlgorithm,
+                algorithm: theme.defaultAlgorithm,
                 token: {
                   colorPrimary: '#357ABD',
                   colorLink: '#000',

@@ -38,13 +38,36 @@ export default function GoogleTranslateFloatButton() {
     };
   }, []);
 
+  useEffect(() => {
+    if(!showWidget) return;
+    function onLanguageChange() {
+      const select = document.querySelector('.goog-te-combo');
+      if (select) {
+        const selectedLanguage = select.value;
+        console.log('User selected language:', selectedLanguage);
+        setShowWidget(false);
+      }
+    }
+
+    const select = document.querySelector('.goog-te-combo');
+    if (select) {
+      select.addEventListener('change', onLanguageChange);
+    }
+
+    return () => {
+      if (select) {
+        select.removeEventListener('change', onLanguageChange);
+      }
+    };
+  }, [showWidget]);
+
   return (
     <>
       <Button
         icon={<GlobalOutlined />}
         type="primary"
         shape="round"
-        className={`notranslate animate-pulse ${showWidget ? "animate-pulse" : ""}`}
+        className={`notranslate ${showWidget ? "animate-pulse" : "animate-none"}`}
         onClick={() => setShowWidget(!showWidget)}
         style={{ position: "fixed", right: 24, bottom: 24, zIndex: 10001 }}
       >
