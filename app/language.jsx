@@ -67,7 +67,7 @@ export default function GoogleTranslateFloatButton() {
         icon={<GlobalOutlined />}
         type="primary"
         shape="round"
-        className={`notranslate ${showWidget ? "animate-pulse" : "animate-none"}`}
+        className={`notranslate ${!showWidget ? "animate-pulse" : "animate-none"}`}
         onClick={() => setShowWidget(!showWidget)}
         style={{ position: "fixed", right: 24, bottom: 24, zIndex: 10001 }}
       >
@@ -76,6 +76,7 @@ export default function GoogleTranslateFloatButton() {
 
       <div
         id="google_translate_element"
+        onBlur={()=>setShowWidget(false)}
         style={{
           display: showWidget ? "block" : "none",
           position: "fixed",

@@ -31,7 +31,6 @@ export const metadata: Metadata = {
     name:"Atrafi Medical Team"
   },
   robots:"index, follow",
-  viewport: "width=device-width, initial-scale=1",
 };
 
 export default function RootLayout({
