@@ -52,27 +52,27 @@ export default function AboutUs() {
       </section>
 
       <Divider className="my-16" />
-      <section className="flex  items-center gap-8">
-        <img
-          src="/mkb.png"
-          alt="Mohamad Khalid Batterjee - Manager (Atrafi Medical Center)"
-          className="w-full md:w-1/2 rounded-lg shadow-md object-cover max-h-96"
-          loading="lazy"
-        />
-        <div className="w-1/2">
-          <Title level={4} className="!text-blue-900 mb-3 font-semibold">
+      <section className="flex flex-col md:flex-row items-center gap-8">
+        <div className="md:w-1/2">
+          <Title level={4} className="!text-blue-900 font-semibold">
             Mohamad Khalid Batterjee
             <span className="text-blue-400 px-1">
               Manager (Atrafi Medical Center)
             </span>
           </Title>
         </div>
+        <img
+          src="/mkb.png"
+          alt="Mohamad Khalid Batterjee - Manager (Atrafi Medical Center)"
+          className="w-full md:w-1/2 rounded-lg shadow-md object-cover max-h-96"
+          loading="lazy"
+        />
       </section>
 
       <Divider className="my-16" />
-      <section className="flex items-center gap-8">
-        <div className="w-1/2">
-          <Title level={4} className="!text-blue-900 mb-3 font-semibold">
+      <section className="flex flex-col md:flex-row items-center gap-8">
+        <div className="md:w-1/2">
+          <Title level={4} className="!text-blue-900font-semibold">
             NAIF AL JOUFI
             <span className="text-blue-400 px-1">
               Technical Director
@@ -86,7 +86,9 @@ export default function AboutUs() {
           loading="lazy"
         />
       </section>
-<Divider className="my-16" />
+      
+      
+      <Divider className="my-16" />
 
       <section className="flex flex-col md:flex-row items-center gap-8">
         <img
