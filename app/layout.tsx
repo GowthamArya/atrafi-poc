@@ -3,11 +3,13 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { AntdRegistry } from '@ant-design/nextjs-registry';
 import '@ant-design/v5-patch-for-react-19';
 import "./globals.css";
-
+import { FloatButton } from 'antd';
 import { ConfigProvider, theme } from 'antd';
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { WishlistCartProvider } from "./context/WishlistCartContext";
+import LangFloatSwitch from "./language";
+import GoogleTranslateFloatButton from "./language";
 
 export const dynamic = "force-dynamic";
 
@@ -38,7 +40,7 @@ export default function RootLayout({
               theme={{
                 algorithm: theme.compactAlgorithm,
                 token: {
-                  colorPrimary: '#77BEF0',
+                  colorPrimary: '#357ABD',
                   colorLink: '#000',
                   colorLinkHover: '#000',
                   colorLinkActive: 'blue'
@@ -47,6 +49,7 @@ export default function RootLayout({
             >
                 <Header />
                 {children}
+                <GoogleTranslateFloatButton />
                 <Footer />
             </ConfigProvider>
           </AntdRegistry>

@@ -11,6 +11,7 @@ export default function AboutUs() {
       <Title level={2} className="!text-blue-400 mb-10 text-center font-semibold">
         About Us
       </Title>
+      <Divider className="my-16" />
 
       <Paragraph className="mb-10 text-gray-800 text-lg leading-relaxed text-justify">
         At Atrafi Medical Center, we believe every challenge can be turned into strength.
@@ -21,38 +22,101 @@ export default function AboutUs() {
 
       
 
-      <hr />
-
-      <section className="flex flex-col justify-start items-center my-16">
-        <Title level={4} className="!text-blue-400">
-          Founder
-        </Title>
-        <img
-          src="/MohamadKhalidBatterjee.png"
-          alt="Mohamad Khalid Batterjee - Manager at Atrafi"
-          className="w-full rounded-lg shadow-md object-cover max-h-96"
-          loading="lazy"
-        />
-      </section>
-
-      <section className="flex flex-col md:flex-row items-center gap-8 mb-16">
+      <Divider className="my-16" />
+      <section className="flex flex-col md:flex-row items-center gap-8">
         <div className="md:w-1/2">
           <Title level={4} className="!text-blue-900 mb-3 font-semibold">
-            Mohamad Khalid A Batterjee (Manager) 
+            Prof. Khalid Batterjee, MD (
+            <span className="text-blue-400 px-1">
+              Founder
+            </span>)
           </Title>
           <Paragraph className="text-gray-700 text-lg leading-relaxed">
-            Managing Director and Co-founder<br />
-            Owner & Co-founder<br />
-            Chief OPC specialist & Operation Director
+            Senior Consultant Orthopedic Spine and Trauma Surgeon<br />
+            Consultant Orthopedic and Spine Surgery<br />
+            M.D. in Orthopedic Surgery, University of Essen, Germany<br />
+            Specialized in Orthopedic Spine Surgery, Hip and Knee Arthroplasty,<br />
+            Scoliosis, Minimally Invasive Spine Surgery, and Orthopedic Trauma.<br />
+            <br />
+            <strong>Languages:</strong> Arabic, English, German
+          </Paragraph>
+          <Paragraph className="text-gray-700 text-lg leading-relaxed">
+            Prof. Batterjee has extensive expertise in the treatment of spine deformities (scoliosis), minimally invasive spine surgery, and complex orthopedic trauma. He has helped a wide range of patients through his holistic and advanced approach to orthopedic care.
           </Paragraph>
         </div>
         <img
-          src="/mkb.png"
-          alt="Mohamad Khalid A Batterjee - Manager"
+          src="/MohamadKhalidBatterjee.png"
+          alt="Prof. Khalid Batterjee, MD - Founder"
           className="w-full md:w-1/2 rounded-lg shadow-md object-cover max-h-96"
           loading="lazy"
         />
       </section>
+      
+
+
+
+
+
+
+
+      <Divider className="my-16" />
+
+      <Title level={3} className="!text-blue-400 mb-8 text-center font-semibold">
+        Leadership & Technical Team
+      </Title>
+
+      <div className="text-center mb-10">
+          <Title level={4} className="!text-blue-900 mb-3 font-semibold">
+            Naif Al Joufi
+          </Title>
+          <Paragraph className="text-gray-700 text-lg leading-relaxed">
+            Managing Director and Co-founder<br />
+          </Paragraph>
+
+          <Title level={4} className="!text-blue-900 mb-3 font-semibold mt-6">
+            Azizah Al Joufi
+          </Title>
+          <Paragraph className="text-gray-700 text-lg leading-relaxed">
+            Owner & Co-founder<br />
+          </Paragraph>
+
+          <Title level={4} className="!text-blue-900 mb-3 font-semibold mt-6">
+            Badran Hassan Badran
+          </Title>
+          <Paragraph className="text-gray-700 text-lg leading-relaxed">
+            Chief OPC Specialist & Operation Director
+          </Paragraph>
+
+          <Paragraph className="text-gray-700 text-lg leading-relaxed mt-6">
+            Our technical team is led by Mr. Badran, co-founder and Senior Technical Specialist. He is of Jordanian nationality, graduated from the German National Training Institute in Jordan in 1990, supervised by GTZ (German Establishment for Technical Coordination), the Royal Jordanian Medical Service, and Jordan’s Ministry of Health.
+          </Paragraph>
+          <Paragraph className="text-gray-700 text-lg leading-relaxed">
+            Mr. Badran’s extensive expertise comes from working and consulting with many Jordanian medical establishments and serving with the International Committee of the Red Cross (ICRC) in Geneva, Switzerland since 1994. He attended advanced courses in plastic prosthesis techniques and specialized in polypropylene prosthesis technology.
+          </Paragraph>
+          <Paragraph className="text-gray-700 text-lg leading-relaxed">
+            He has served as an expert in Ethiopia, Pakistan, Afghanistan, and Turkmenistan. Mr. Badran’s innovative approach includes recycling plastic waste, and he was appreciated by the ICRC for inventing a hydraulic machine to produce plastic cuffs for crutches.
+          </Paragraph>
+          <Paragraph className="text-gray-700 text-lg leading-relaxed">
+            Joining Saudi German Hospital in 1999 as head of the workshop department, his background and skills have elevated the SGH workshop to international standards, reflecting positively on patient satisfaction and business outcomes.
+          </Paragraph>
+          <Paragraph className="text-gray-700 text-lg leading-relaxed">
+            Mr. Badran specializes in plastic jackets, including Milwaukee corset, shenue jackets, Boston corset, and unique baby TEV splints and various AFO splints. Atrafi is proud to have Mr. Badran continue leading its technical services since its establishment in 2017.
+          </Paragraph>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
       <Divider className="my-16" />
