@@ -68,25 +68,6 @@ export default function AboutUs() {
           loading="lazy"
         />
       </section>
-
-      <Divider className="my-16" />
-      <section className="flex flex-col md:flex-row items-center gap-8">
-        <div className="md:w-1/2">
-          <Title level={4} className="!text-blue-900font-semibold">
-            NAIF AL JOUFI
-            <span className="text-blue-400 px-1">
-              Technical Director
-            </span>
-          </Title>
-        </div>
-        <img
-          src="/naif.webp"
-          alt="NAIF AL JOUFI"
-          className="w-full md:w-1/2 rounded-lg shadow-md object-cover max-h-96"
-          loading="lazy"
-        />
-      </section>
-      
       
       <Divider className="my-16" />
 
@@ -130,13 +111,6 @@ export default function AboutUs() {
           </Title>
           <Paragraph className="text-gray-700 text-lg leading-relaxed">
             Managing Director and Co-founder<br />
-          </Paragraph>
-
-          <Title level={4} className="!text-blue-900 mb-3 font-semibold mt-6">
-            Azizah Al Joufi
-          </Title>
-          <Paragraph className="text-gray-700 text-lg leading-relaxed">
-            Owner & Co-founder<br />
           </Paragraph>
 
           <Title level={4} className="!text-blue-900 mb-3 font-semibold mt-6">
