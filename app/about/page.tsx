@@ -71,36 +71,6 @@ export default function AboutUs() {
       
       <Divider className="my-16" />
 
-      <section className="flex flex-col md:flex-row items-center gap-8">
-        <img
-          src="https://img1.wsimg.com/isteam/ip/ec31fc0e-619a-46bc-9b53-b20f5f0533c2/blob-0008.png/:/cr=t:0.53%25,l:0%25,w:100%25,h:98.94%25/rs=w:1200,h:1600,cg:true"
-          alt="Dr. Yasser Eid"
-          className="w-full md:w-1/2 bg-white rounded-lg shadow-md object-cover max-h-96"
-          loading="lazy"
-        />
-        <div className="md:w-1/2">
-          <Title level={4} className="!text-blue-900 mb-3 font-semibold">
-            Dr. Yasser Eid, MD, MBA
-          </Title>
-          <Paragraph className="text-gray-700 text-lg leading-relaxed">
-            Co-founder and Director<br />
-            Orthopedic Surgeon with an MBA from Leicester University, UK.
-          </Paragraph>
-          <Paragraph className="text-gray-700 text-lg leading-relaxed">
-            With over 25 years of experience managing private healthcare services in the GCC,
-            Dr. Yasser has collaborated with international institutes and experts from Germany,
-            UK, France, Austria, Switzerland, and the USA.
-          </Paragraph>
-          <Paragraph className="text-gray-700 text-lg leading-relaxed">
-            Dr. Yasser is an active member of several professional organizations including the
-            American Medical Director Association, Egyptian Medical Syndicate, Middle East Spine Group, and others.
-          </Paragraph>
-        </div>
-      </section>
-
-      
-      <Divider className="my-16" />
-
       <Title level={3} className="!text-blue-400 mb-8 text-center font-semibold">
         Leadership & Technical Team
       </Title>
