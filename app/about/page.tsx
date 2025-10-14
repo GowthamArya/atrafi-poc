@@ -76,12 +76,6 @@ export default function AboutUs() {
       </Title>
 
       <div className="text-center mb-10">
-          <Title level={4} className="!text-blue-900 mb-3 font-semibold">
-            Naif Al Joufi
-          </Title>
-          <Paragraph className="text-gray-700 text-lg leading-relaxed">
-            Managing Director and Co-founder<br />
-          </Paragraph>
 
           <Title level={4} className="!text-blue-900 mb-3 font-semibold mt-6">
             Badran Hassan Badran
